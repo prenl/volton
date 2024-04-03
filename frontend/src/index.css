@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 10%;
+  /* Adjust as needed */
+  height: auto;
+  margin-left: auto;
+}
