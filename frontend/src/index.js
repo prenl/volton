@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
+
+//components
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <header className='header'>
-      <h3>Placeholder</h3>
-      <img src={require('./img/VOLTON-logo.png')} alt='Volton Logo' className='logo' />
-    </header>
+    <Header />
     <App />
+    <Footer />
   </React.StrictMode>
 );
 
