@@ -1,17 +1,26 @@
 const mongoose = require("mongoose");
 
-const categorySchema = new mongoose.Schema({
+const requestSchema = new mongoose.Schema({
     id: {
         type: Number,
         required: true,
         unique: true,
     },
-    name: {
+    user_id: {
+        type: Number,
+        required: true,
+    },
+    status: {
         type: String,
         required: true,
     },
     description: {
         type: String,
+        required: false,
+        default: null,
+    },
+    battery_id: {
+        type: Number,
         required: false,
         default: null,
     },
@@ -25,6 +34,6 @@ const categorySchema = new mongoose.Schema({
     },
 });
 
-const Category = mongoose.model("Category", categorySchema);
+const Request = mongoose.model("Request", requestSchema);
 
-module.exports = Category;
+module.exports = Request;
