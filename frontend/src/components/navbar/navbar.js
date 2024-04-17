@@ -9,11 +9,11 @@ export const Navbar = () => {
 
     return (
         <div className='navbarContainer'>
-            <div className='navbarLink' onClick={navigator('about-us')}>О нас</div>
-            <div className='navbarLink' onClick={navigator('specials')}>Акции</div>
-            <div className='navbarLink' onClick={navigator('offers')}>Услуги</div>
-            <div className='navbarLink' onClick={navigator('delivery')}>Доставка</div>
-            <div className='navbarLink' onClick={navigator('warranty')}>Гарантия</div>
+            <div className='navbarLink' onClick={() => navigator('about-us')}>О нас</div>
+            <div className='navbarLink' onClick={() => navigator('about-us/specials')}>Акции</div>
+            <div className='navbarLink' onClick={() => navigator('about-us/offers')}>Услуги</div>
+            <div className='navbarLink' onClick={() => navigator('about-us/delivery')}>Доставка</div>
+            <div className='navbarLink' onClick={() => navigator('about-us/warranty')}>Гарантия</div>
         </div>
     )
 }

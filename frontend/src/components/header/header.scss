@@ -2,19 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .3rem .5rem;
     background-color: #58595B;
     color: #fff;
-
-    .header-title {
-        margin: 0;
-        /* Remove default margin */
-    }
 
     .header-logo {
         width: 100px;
         /* Adjust width as needed */
         height: auto;
         /* Maintain aspect ratio */
+        cursor: pointer;
     }
 }
