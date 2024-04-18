@@ -9,6 +9,10 @@ import { Navbar } from './components/navbar/navbar';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
+// pages
+import AboutUs from './components/pages/AboutUs/AboutUs';
+import Home from './components/pages/Home/Home';
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,9 +20,9 @@ export default function App() {
       <Navbar />
       {/* Basic Routing */}
       <Routes>
-        <Route path='/'></Route>
+        <Route path='/' index element={<Home />}></Route>
         <Route path='catalog'></Route>
-        <Route path='about-us'>
+        <Route path='about-us' element={<AboutUs />}>
           <Route path='specials'></Route>
           <Route path='offers'></Route>
           <Route path='delivery'></Route>
