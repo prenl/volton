@@ -28,7 +28,6 @@ export default function App() {
           <Route path='delivery'></Route>
           <Route path='warranty'></Route>
         </Route>
-        <Route path='contacts'></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />
