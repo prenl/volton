@@ -1,7 +1,46 @@
-*,
-*::before,
-*::after {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$primary: #58595B;
+$mainDark: #2e2e2f;
+$mainLight: #f6f6f6;
+
+
+$secondary: #eb222a;
+$secondaryAccent: #e80008;
+//mixins for flex display and common styling
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mainScreenContainer {
+  @include flex-centered;
+  background-color: $primary;
+  height: calc(100vh - 75px);
+  width: 100%;
+  gap: 2%;
+}
+
+@mixin initial-inputs {
+  color: $mainDark;
+  height: 18px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+
+  &::placeholder {
+    color: $primary;
+  }
 }

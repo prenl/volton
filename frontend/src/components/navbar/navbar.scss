@@ -1,18 +1,20 @@
+@import "../../index.scss";
+
 .navbarContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333;
-    color: white;
+    @include flex-centered;
+    background-color: $mainDark;
+    color: $mainLight;
     padding: 0;
 
     .navbarLink {
+        @include flex-centered;
         cursor: pointer;
-        padding: 10px;
+        min-width: 20%;
+        padding: 10px 0 10px 0;
         transition: background-color 0.3s ease;
     }
 
     .navbarLink:hover {
-        background-color: #332;
+        background-color: $secondary;
     }
 }

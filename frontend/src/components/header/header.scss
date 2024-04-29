@@ -1,13 +1,16 @@
+@import "../../index.scss";
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .3rem .5rem;
-    background-color: #58595B;
-    color: #fff;
+    background-color: $primary;
+    color: $mainLight;
 
     .header-logo {
-        width: 100px;
+        padding-left: 20px;
+        width: 200px;
         /* Adjust width as needed */
         height: auto;
         /* Maintain aspect ratio */
