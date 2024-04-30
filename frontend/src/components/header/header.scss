@@ -16,4 +16,8 @@
         /* Maintain aspect ratio */
         cursor: pointer;
     }
+
+    .registerBtn {
+        @include button-login
+    }
 }

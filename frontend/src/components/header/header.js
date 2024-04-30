@@ -28,7 +28,7 @@ const Header = () => {
           alt="Volton Logo"
           className="header-logo"
         />
-        {!isRegisterOpen && <button onClick={openModal}>Open Registration Modal</button>}
+        {!isRegisterOpen && <button className="registerBtn" onClick={openModal}>Open Registration Modal</button>}
         <Register isOpen={isRegisterOpen} onClose={closeModal} />
       </header>
     </div>
