@@ -18,6 +18,13 @@
     }
 
     .registerBtn {
+        margin-left: auto;
+        margin-right: 10px;
         @include button-login
+    }
+
+    .shoppingCart {
+        max-width: 40px;
+        margin-right: 15px;
     }
 }

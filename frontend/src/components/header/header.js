@@ -5,6 +5,7 @@ import Register from '../modals/Register/Register';
 
 import './header.scss';
 import logo from '../../img/VOLTON-logo.png';
+import cart from '../../img/shopping-cart.png';
 
 const Header = () => {
 
@@ -21,15 +22,17 @@ const Header = () => {
   };
 
   return (
-    <div className='headerContainer' onClick={() => { navigator('/') }}>
-      <header className="header">
+    <div className='headerContainer' >
+      <header className="header" >
         <img
           src={logo}
           alt="Volton Logo"
           className="header-logo"
+          onClick={() => { navigator('/') }}
         />
-        {!isRegisterOpen && <button className="registerBtn" onClick={openModal}>Open Registration Modal</button>}
+        {!isRegisterOpen && <button className="registerBtn" onClick={openModal}>Зарегестрироваться</button>}
         <Register isOpen={isRegisterOpen} onClose={closeModal} />
+        <img src={cart} alt='shopping cart' className='shoppingCart' />
       </header>
     </div>
   );

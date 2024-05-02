@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.advantages-wrap-container {
+    text-align: center;
+    /* Center text horizontally */
+    background-color: #ececec;
+    padding: 30px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+
+    .advatanges-heading {
+        font-size: 36px;
+        margin-top: 0;
+        padding-bottom: 25px;
+        border-bottom: 2px solid $secondary;
+    }
+
+    span {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $secondary;
+        border-radius: 50%;
+        position: relative;
+        top: -46px;
+    }
+
+    .advantage-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .advantage {
+            flex: 1;
+            padding: 0 10px;
+
+            h3 {
+                font-size: 28px;
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 18px;
+                color: $primary;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

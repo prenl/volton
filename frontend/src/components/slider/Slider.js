@@ -8,15 +8,15 @@ const OffersSlider = ({ offers }) => {
 
     const sliderRef = useRef(null);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (sliderRef.current) {
-                sliderRef.current.slickNext();
-            }
-        }, 3000); // Change slide every 2 seconds
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         if (sliderRef.current) {
+    //             sliderRef.current.slickNext();
+    //         }
+    //     }, 3000); // Change slide every 2 seconds
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     // Settings for the slider
     const settings = {
@@ -52,6 +52,7 @@ const OffersSlider = ({ offers }) => {
             <Slider ref={sliderRef} {...settings}>
                 <div>
                     <h3>1</h3>
+                    <div>Pidorasi</div>
                 </div>
                 <div>
                     <h3>2</h3>

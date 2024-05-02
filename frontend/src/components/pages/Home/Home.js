@@ -1,9 +1,13 @@
 import React from "react";
 import OffersSlider from "../../slider/Slider";
+import Advantages from "../../Advantages-stripe/Advantages.js"
 
 const Home = () => {
     return (
-        <OffersSlider />
+        <div>
+            <OffersSlider />
+            <Advantages />
+        </div>
     );
 };
 export default Home;
