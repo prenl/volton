@@ -2,42 +2,28 @@
 
 .advantages-wrap-container {
     text-align: center;
-    /* Center text horizontally */
-    background-color: #ececec;
+    background-color: #e1e1e1;
     padding: 30px;
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
+    border-top: 2px solid $mainDark;
+    border-bottom: 2px solid $mainDark;
 
     .advatanges-heading {
         font-size: 36px;
         margin-top: 0;
-        padding-bottom: 25px;
-        border-bottom: 2px solid $secondary;
-    }
-
-    span {
-        display: inline-block;
-        width: 50px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: $secondary;
-        border-radius: 50%;
-        position: relative;
-        top: -46px;
     }
 
     .advantage-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        padding: 20px;
 
         .advantage {
             flex: 1;
-            padding: 0 10px;
 
             h3 {
-                font-size: 28px;
+                font-size: 25px;
                 margin-top: 0;
                 margin-bottom: 5px;
             }

@@ -5,7 +5,6 @@ const Advantages = () => {
     return (
         <div className='advantages-wrap-container'>
             <h3 className='advatanges-heading'>Достоинства</h3>
-            <span></span>
             <div className='advantage-container'>
                 <div className="advantage">
                     <h2>Гарантия</h2>
