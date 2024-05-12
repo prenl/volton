@@ -5,7 +5,7 @@ import Register from '../modals/Register/Register';
 
 import './header.scss';
 import logo from '../../img/VOLTON-logo.png';
-import cart from '../../img/shopping-cart.png';
+import cart from '../../img/icons/shopping-cart.png';
 
 const Header = () => {
 

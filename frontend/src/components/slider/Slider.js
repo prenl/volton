@@ -71,7 +71,6 @@ const OffersSlider = ({ offers }) => {
                 </div>
             </Slider>
         </div>
-
     );
 };
 

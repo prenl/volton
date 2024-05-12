@@ -2,17 +2,13 @@
 
 .advantages-wrap-container {
     text-align: center;
-    background-color: #e1e1e1;
     padding: 30px;
-    border-top: 2px solid $mainDark;
-    border-bottom: 2px solid $mainDark;
 
     .advatanges-heading {
-        font-size: 36px;
         margin-top: 0;
     }
 
-    .advantage-container {
+    .advantages-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -32,6 +28,10 @@
                 font-size: 18px;
                 color: $primary;
                 margin-bottom: 0;
+            }
+
+            img {
+                max-width: calc(100% - 80%);
             }
         }
     }
