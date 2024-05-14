@@ -1,19 +1,22 @@
 import React from 'react';
 import "./offer.scss";
 
-import Zaglushka from "../../img/заглушка.jpeg";
 
 const Offer = ({ batteries }) => {
     return (
         <div className="car-battery-listing">
             <div className="battery-preview">
-                <img src={Zaglushka} alt={`Preview`} />
             </div>
             <div className="battery-details">
                 <h3>Аккум</h3>
                 <p>Фирма: Барс</p>
                 <p>Цена: 10000</p>
-                <p>Рейтинг: 4/5</p>
+                <p>{/* Placeholder for star ratings */}
+                    {[...Array(5)].map((_, index) => (
+                        <span key={index}>&#9733;</span>
+                    ))}
+                </p>
+                <button className="purchase-button">Добавить в корзину</button>
             </div>
             {/* {batteries.map((battery) => (
                 <div key={battery.id} className="battery-card"> */}

@@ -5,8 +5,11 @@ const SmoothHeading = (props) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // After the component mounts, set the mounted state to true
+        // Set the mounted state to true when the component mounts
         setMounted(true);
+
+        // Reset the animation state when the component is about to be unmounted
+        return () => setMounted(false);
     }, []);
 
     return (

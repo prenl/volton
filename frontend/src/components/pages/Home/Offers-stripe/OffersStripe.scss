@@ -1,0 +1,12 @@
+@import "../../../../index.scss";
+
+.special-offer-stripe {
+    padding: 20px;
+    @include flex-centered;
+    flex-direction: column
+}
+
+.offer-container {
+    display: flex;
+    gap: 1%;
+}

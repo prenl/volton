@@ -1,11 +1,26 @@
+@import "../../index.scss";
+
 .slider-container {
-    background-image: url("../../img/заглушка.jpeg");
     background-size: cover;
     background-position: center;
-    max-width: 800px;
-    max-height: 200px;
+    max-width: 855px;
     /* Set the maximum width of the slider container */
     padding: 40px;
     margin: 0px auto;
+
     /* Center the slider container */
+    .slide {
+        @include flex-centered;
+        flex-direction: column;
+        height: 400px;
+
+        h3 {
+            color: $secondary;
+            font-size: 30px;
+        }
+
+        span {
+            color: $mainLight;
+        }
+    }
 }

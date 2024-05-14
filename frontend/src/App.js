@@ -15,23 +15,27 @@ import Home from './components/pages/Home/Home';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Navbar />
-      {/* Basic Routing */}
-      <Routes>
-        <Route path='/' index element={<Home />}></Route>
-        <Route path='catalog'></Route>
-        <Route path='about-us' element={<AboutUs />}>
-          <Route path='specials'></Route>
-          <Route path='offers'></Route>
-          <Route path='delivery'></Route>
-          <Route path='warranty'></Route>
-        </Route>
-        <Route path='*' element={<NotFound />}></Route>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+
+      <BrowserRouter>
+        <Header />
+        <Navbar />
+        {/* Basic Routing */}
+        <Routes>
+          <Route path='/' index element={<Home />}></Route>
+          <Route path='catalog'></Route>
+          <Route path='about-us' element={<AboutUs />}>
+            <Route path='specials'></Route>
+            <Route path='offers'></Route>
+            <Route path='delivery'></Route>
+            <Route path='warranty'></Route>
+          </Route>
+          <Route path='*' element={<NotFound />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
+    </>
   );
 }
 
