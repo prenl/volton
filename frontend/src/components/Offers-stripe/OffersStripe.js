@@ -1,7 +1,7 @@
 import React from 'react';
 import "./OffersStripe.scss";
-import Offer from '../../../offer/offer';
-import SmoothHeading from '../../../smooth-heading/smooth-heading';
+import Offer from "../offer/offer.js";
+import SmoothHeading from '../smooth-heading/smooth-heading';
 
 const OffersStripe = ({ offers }) => {
     return (

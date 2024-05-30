@@ -1,6 +1,5 @@
 @import "../../../index.scss";
 
 .main-container {
-    @include mainScreenContainer;
     flex-direction: column;
 }

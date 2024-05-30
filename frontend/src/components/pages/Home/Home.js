@@ -1,10 +1,10 @@
 import React from "react";
 import OffersSlider from "../../slider/Slider";
-import Advantages from "../../Advantages-stripe/Advantages.js"
-import Offer from "../../offer/offer.js";
+import Advantages from "../../Advantages-stripe/Advantages.js";
+import OffersStripe from "../../Offers-stripe/OffersStripe.js";
 
 import "./Home.scss";
-import OffersStripe from "./Offers-stripe/OffersStripe.js";
+import MapComponent from "../../MapComponent/MapComponent.js";
 
 const Home = () => {
     return (
@@ -12,7 +12,7 @@ const Home = () => {
             <OffersSlider />
             <Advantages />
             <OffersStripe />
-
+            <MapComponent />
         </div>
     );
 };
