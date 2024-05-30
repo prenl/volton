@@ -27,8 +27,7 @@ $secondaryAccent: #e80008;
 
 @mixin mainScreenContainer {
   @include flex-centered;
-  background-color: $primary;
-  height: calc(100vh - 75px);
+  background-color: #fff;
   width: 100%;
   gap: 2%;
 }

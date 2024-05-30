@@ -4,9 +4,8 @@
     background-size: cover;
     background-position: center;
     max-width: 855px;
-    /* Set the maximum width of the slider container */
-    padding: 40px;
-    margin: 0px auto;
+    margin: 70px 0;
+    border: 1px solid $primary;
 
     /* Center the slider container */
     .slide {

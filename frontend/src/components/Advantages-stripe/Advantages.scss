@@ -9,10 +9,7 @@
     }
 
     .advantages-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        @include flex-centered;
         padding: 20px;
 
         .advantage {
@@ -31,7 +28,7 @@
             }
 
             img {
-                max-width: calc(100% - 80%);
+                max-width: calc(100% - 75%);
             }
         }
     }
