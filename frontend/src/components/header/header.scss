@@ -1,30 +1,89 @@
 @import "../../index.scss";
 
+.headerContainer {
+    width: 100%;
+    background-color: $primary;
+    /* Change to desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: adds a subtle shadow */
+    padding: 10px 0;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .3rem .5rem;
-    background-color: $primary;
-    color: $mainLight;
+    max-width: 1200px;
+    /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Adjust as needed */
+}
 
-    .header-logo {
-        padding-left: 20px;
-        width: 200px;
-        /* Adjust width as needed */
-        height: auto;
-        /* Maintain aspect ratio */
-        cursor: pointer;
+.header-logo {
+    height: 50px;
+    /* Adjust as needed */
+    cursor: pointer;
+}
+
+.registerBtn {
+    background-color: $secondaryAccent;
+    /* Change to desired button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registerBtn:hover {
+    background-color: $secondaryAccent;
+    /* Change to desired hover color */
+}
+
+.shoppingCart {
+    height: 30px;
+    /* Adjust as needed */
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .registerBtn {
-        margin-left: auto;
-        margin-right: 10px;
-        @include button-login
+        margin-top: 10px;
+        width: 100%;
+        /* Make button full width on small screens */
+        text-align: center;
+
     }
 
     .shoppingCart {
-        max-width: 40px;
-        margin-right: 15px;
+
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 10px;
+        /* Adjust padding for very small screens */
+    }
+
+    .header-logo {
+        height: 40px;
+        /* Smaller logo for very small screens */
+    }
+
+    .shoppingCart {
+        height: 25px;
+        /* Smaller cart icon for very small screens */
     }
 }

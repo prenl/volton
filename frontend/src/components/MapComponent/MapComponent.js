@@ -4,6 +4,9 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
+import On from '../../img/ON-logo-removebg-preview.png';
+import './MapComponent.scss';
+
 // Исправление проблемы с маркерами
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -14,22 +17,23 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
     return (
-        <MapContainer center={[51.1672761, 71.4759185]} zoom={15} style={{ height: "400px", width: "80%", margin: '0 auto' }}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Marker position={[51.1672761, 71.4759185]}>
-                <Popup>
-                    Маркеры Volton.
-                </Popup>
-            </Marker>
-            <Marker position={[59.9342802, 30.3350986]}>
-                <Popup>
-                    Маркеры Санкт-Петербурга.
-                </Popup>
-            </Marker>
-        </MapContainer>
+        <div className='mapContainer'>
+            <div className='beOnTime'>
+                <h4>Be <img src={On} alt='ON' className="onImage" /> Time</h4>
+            </div>
+
+            <MapContainer center={[51.1672761, 71.4759185]} zoom={15} style={{ height: "400px", width: "100%", margin: '0 auto' }}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker position={[51.1672761, 71.4759185]}>
+                    <Popup>
+                        Маркеры Volton.
+                    </Popup>
+                </Marker>
+            </MapContainer>
+        </div>
     );
 };
 
