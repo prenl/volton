@@ -1,7 +1,6 @@
 import React from "react";
 import OffersSlider from "../../slider/Slider";
 import Advantages from "../../Advantages-stripe/Advantages.js";
-import OffersStripe from "../../Offers-stripe/OffersStripe.js";
 
 import "./Home.scss";
 import MapComponent from "../../MapComponent/MapComponent.js";

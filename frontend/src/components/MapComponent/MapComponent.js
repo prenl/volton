@@ -1,38 +1,36 @@
+import React, { useEffect } from 'react';
 
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
-
-import On from '../../img/ON-logo-removebg-preview.png';
+import OnImage from '../../img/ON-logo-removebg-preview.png';
 import './MapComponent.scss';
 
-// Исправление проблемы с маркерами
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png'
-});
-
 const MapComponent = () => {
+    useEffect(() => {
+        if (window.ymaps) {
+            window.ymaps.ready(init);
+        }
+
+        function init() {
+            const map = new window.ymaps.Map("map", {
+                center: [51.167255, 71.476306],
+                zoom: 15
+            });
+
+            const placemark = new window.ymaps.Placemark([51.167255, 71.476306], {
+                hintContent: 'Улица Александра Пушкина, 31',
+                balloonContent: 'Маркеры Volton.'
+            });
+
+            map.geoObjects.add(placemark);
+        }
+    }, []);
+
     return (
         <div className='mapContainer'>
             <div className='beOnTime'>
-                <h4>Be <img src={On} alt='ON' className="onImage" /> Time</h4>
+                <h4>Be <img src={OnImage} alt='ON' className="onImage" /> Time</h4>
             </div>
 
-            <MapContainer center={[51.1672761, 71.4759185]} zoom={15} style={{ height: "400px", width: "100%", margin: '0 auto' }}>
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
-                <Marker position={[51.1672761, 71.4759185]}>
-                    <Popup>
-                        Маркеры Volton.
-                    </Popup>
-                </Marker>
-            </MapContainer>
+            <div id="map" className="map"></div>
         </div>
     );
 };

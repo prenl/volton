@@ -63,19 +63,19 @@ const OffersSlider = ({ offers }) => {
                 <div className="slide-container">
                     <div className='slide' style={{ backgroundImage: `url(${prevOne})` }}>
                         <SmoothHeading className="smooth-heading" fontSize="30" content="VOLTON" />
-                        <span>Интернет покупка и гарантия качества</span>
+                        <SmoothHeading className='smooth-heading' fontSize="20" content="Интернет покупка и гарантия качествa" />
                     </div>
                 </div>
                 <div className="slide-container">
                     <div className='slide' style={{ backgroundImage: `url(${prevTwo})` }}>
                         <SmoothHeading className="smooth-heading" fontSize="30" content="VOLTON" />
-                        <span>Интернет покупка и гарантия качества</span>
+                        <SmoothHeading className='smooth-heading' fontSize="20" content="Интернет покупка и гарантия качествa" />
                     </div>
                 </div>
                 <div className="slide-container">
                     <div className='slide' style={{ backgroundImage: `url(${prevThree})` }}>
                         <SmoothHeading className="smooth-heading" fontSize="30" content="VOLTON" />
-                        <span>Интернет покупка и гарантия качества</span>
+                        <SmoothHeading className='smooth-heading' fontSize="20" content="Интернет покупка и гарантия качествa" />
                     </div>
                 </div>
             </Slider>
