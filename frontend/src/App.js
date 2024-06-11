@@ -12,6 +12,7 @@ import Footer from './components/footer/footer';
 // pages
 import AboutUs from './components/pages/AboutUs/AboutUs';
 import Home from './components/pages/Home/Home';
+import Catalog from './components/pages/Catalog/Catalog';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
         {/* Basic Routing */}
         <Routes>
           <Route path='/' index element={<Home />}></Route>
-          <Route path='catalog'></Route>
+          <Route path='catalog' element={<Catalog />}></Route>
           <Route path='about-us' element={<AboutUs />}>
             <Route path='specials'></Route>
             <Route path='offers'></Route>
