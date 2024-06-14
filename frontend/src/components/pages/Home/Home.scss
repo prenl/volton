@@ -1,6 +1,7 @@
 @import "../../../index.scss";
 
 .main-container {
-    max-width: 900px;
-    margin: auto;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }

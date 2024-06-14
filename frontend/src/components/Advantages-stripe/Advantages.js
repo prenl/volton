@@ -10,7 +10,7 @@ import SmoothHeading from '../smooth-heading/smooth-heading';
 const Advantages = () => {
     return (
         <div className='advantages-wrap-container'>
-            <SmoothHeading content='Достоинства' fontSize={30} className='advatanges-heading' />
+            <SmoothHeading content='Достоинства' fontSize={30} className='advantages-heading smooth-heading' />
             <div className='advantages-container'>
                 <div className="advantage">
                     <img src={Guarantee} alt='Гарантия' />
@@ -28,7 +28,6 @@ const Advantages = () => {
                     <p>Оригинальные товары от известных производителей</p>
                 </div>
             </div>
-        </div>
-    )
+        </div>)
 }
 export default Advantages;

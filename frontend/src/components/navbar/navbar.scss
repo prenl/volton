@@ -1,20 +1,71 @@
 @import "../../index.scss";
 
 .navbarContainer {
-    @include flex-centered;
-    background-color: $mainDark;
-    color: $mainLight;
-    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
 
-    .navbarLink {
-        @include flex-centered;
-        cursor: pointer;
-        min-width: 20%;
-        padding: 10px 0 10px 0;
-        transition: background-color 0.3s ease;
+.navbarLink {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: $primary;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbarLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: $secondaryAccent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbarLink:hover {
+    color: $secondaryAccent;
+}
+
+.navbarLink:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbarContainer {
+        justify-content: center;
+        gap: 15px;
     }
 
-    .navbarLink:hover {
-        background-color: $secondary;
+    .navbarLink {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbarLink {
+        padding: 10px 15px;
+        width: 100%;
+        /* Make links full width */
+        text-align: center;
+    }
+
+    .navbarLink::after {
+        bottom: -4px;
+        /* Adjust position for better visibility */
     }
 }

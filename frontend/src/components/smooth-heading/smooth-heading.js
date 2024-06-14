@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import './smooth-heading.scss'; // Import your CSS file
+import React from 'react';
+import useIntersectionObserver from './useIntersectionObserver';
+import './smooth-heading.scss';
 
-const SmoothHeading = (props) => {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        // Set the mounted state to true when the component mounts
-        setMounted(true);
-
-        // Reset the animation state when the component is about to be unmounted
-        return () => setMounted(false);
-    }, []);
+const SmoothHeading = ({ content, fontSize, className }) => {
+    const [ref, isVisible] = useIntersectionObserver();
 
     return (
-        <div className={`smooth-heading ${mounted ? 'visible' : ''}`}>
-            <h3 style={{ fontSize: props.fontSize }}>{props.content}</h3>
-        </div>
+        <h1
+            ref={ref}
+            className={`${className} ${isVisible ? 'fadeIn' : ''}`}
+            style={{ fontSize: `${fontSize}px` }}
+        >
+            {content}
+        </h1>
     );
-}
+};
 
 export default SmoothHeading;

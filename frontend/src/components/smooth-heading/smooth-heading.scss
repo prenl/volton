@@ -1,20 +1,10 @@
 .smooth-heading {
-    overflow: hidden;
-    /* Ensure text doesn't overflow */
-}
-
-.smooth-heading h3 {
     opacity: 0;
-    /* Start with heading hidden */
-    transform: translateY(40px);
-    /* Slide down from top */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Smooth transition effect */
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.smooth-heading.visible h3 {
+.smooth-heading.fadeIn {
     opacity: 1;
-    /* Fade in */
     transform: translateY(0);
-    /* Slide up to original position */
 }

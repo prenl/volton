@@ -14,6 +14,7 @@ export const Navbar = () => {
             <div className='navbarLink' onClick={() => navigator('about-us/offers')}>Услуги</div>
             <div className='navbarLink' onClick={() => navigator('about-us/delivery')}>Доставка</div>
             <div className='navbarLink' onClick={() => navigator('about-us/warranty')}>Гарантия</div>
+            <div className='navbarLink' onClick={() => navigator('catalog')}>Каталог</div>
         </div>
     )
 }

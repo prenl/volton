@@ -1,0 +1,194 @@
+@import '../../../index.scss';
+
+.catalog-container {
+    display: flex;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.catalog-sidebar {
+    min-width: 250px;
+    padding: 20px;
+    background-color: $mainLight;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.catalog-sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: $mainDark;
+}
+
+.catalog-filter {
+    margin-bottom: 20px;
+}
+
+.catalog-filter label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.catalog-filter select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+}
+
+.catalog-main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.catalog-display-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.catalog-display-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.catalog-display-buttons button:hover {
+    background-color: #111;
+}
+
+.catalog-battery-list.catalog-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.catalog-battery-list.catalog-line,
+.catalog-battery-list.catalog-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-battery-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+    max-width: 160px;
+}
+
+
+
+.catalog-battery-item:hover {
+    transform: translateY(-5px);
+}
+
+.catalog-battery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.catalog-battery-item .catalog-battery-info {
+    text-align: center;
+}
+
+.catalog-battery-item h4 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.catalog-battery-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.catalog-battery-item .catalog-old-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.catalog-battery-item .catalog-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.catalog-battery-item .catalog-order-button {
+    padding: 10px 20px;
+    border: 2px solid $secondary;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $mainDark;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.catalog-battery-item .catalog-order-button:hover {
+    background-color: $secondaryAccent;
+    color: #fff;
+}
+
+.catalog-battery-item.catalog-line,
+.catalog-battery-item.catalog-detailed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px;
+    max-width: none;
+    border-radius: 0;
+    border: #b6b6b6 1px solid;
+}
+
+.catalog-battery-item.catalog-line img,
+.catalog-battery-item.catalog-detailed img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.catalog-battery-item.catalog-line .catalog-battery-info,
+.catalog-battery-item.catalog-detailed .catalog-battery-info {
+    flex-grow: 1;
+}
+
+.catalog-battery-item.catalog-detailed .catalog-detailed-info {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .catalog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog-battery-list.catalog-block .catalog-battery-item {
+        width: calc(50% - 20px);
+    }
+
+    .catalog-battery-list.catalog-line .catalog-battery-item,
+    .catalog-battery-list.catalog-detailed .catalog-battery-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-battery-list.catalog-block .catalog-battery-item {
+        width: 100%;
+    }
+}
