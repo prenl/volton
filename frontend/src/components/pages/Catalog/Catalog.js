@@ -10,7 +10,7 @@ const Catalog = () => {
         voltage: '',
     });
 
-    const [displayMode, setDisplayMode] = useState('block');
+    const [displayMode, setDisplayMode] = useState('catalog-block');
 
     const dummyBatteries = [
         {
@@ -149,15 +149,16 @@ const Catalog = () => {
                                 <img src={battery.image} alt={battery.name} className="catalog-battery-image" />
                                 <div className="catalog-battery-info">
                                     <h4>{battery.name}</h4>
-                                    <p>Бренд: {battery.brand}</p>
-                                    <p>Емкость: {battery.capacity} мАч</p>
-                                    <p>Напряжение: {battery.voltage} В</p>
+
                                     <p className="catalog-price">{battery.price.toFixed(2)} тенге</p>
                                     {battery.old_price && (
                                         <p className="catalog-old-price">Старая цена: {battery.old_price.toFixed(2)} тенге</p>
                                     )}
                                     {displayMode === 'catalog-detailed' && (
                                         <div className="catalog-detailed-info">
+                                            <p>Бренд: {battery.brand}</p>
+                                            <p>Емкость: {battery.capacity} мАч</p>
+                                            <p>Напряжение: {battery.voltage} В</p>
                                             <p>ID категории: {battery.category_id}</p>
                                             {/* Add more detailed information if needed */}
                                         </div>

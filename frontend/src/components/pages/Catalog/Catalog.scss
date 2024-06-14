@@ -1,3 +1,5 @@
+@import '../../../index.scss';
+
 .catalog-container {
     display: flex;
     margin: 40px auto;
@@ -5,9 +7,9 @@
 }
 
 .catalog-sidebar {
-    width: 250px;
+    min-width: 250px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: $mainLight;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -15,7 +17,7 @@
 .catalog-sidebar h3 {
     margin-bottom: 20px;
     font-size: 1.5em;
-    color: #333;
+    color: $mainDark;
 }
 
 .catalog-filter {
@@ -53,14 +55,14 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .catalog-display-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #111;
 }
 
 .catalog-battery-list.catalog-block {
@@ -73,7 +75,7 @@
 .catalog-battery-list.catalog-detailed {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .catalog-battery-item {
@@ -83,7 +85,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     text-align: center;
+    max-width: 160px;
 }
+
+
 
 .catalog-battery-item:hover {
     transform: translateY(-5px);
@@ -123,17 +128,17 @@
 
 .catalog-battery-item .catalog-order-button {
     padding: 10px 20px;
-    border: 2px solid #ffcc00;
+    border: 2px solid $secondary;
     border-radius: 5px;
     background-color: transparent;
-    color: #ffcc00;
+    color: $mainDark;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .catalog-battery-item .catalog-order-button:hover {
-    background-color: #ffcc00;
+    background-color: $secondaryAccent;
     color: #fff;
 }
 
@@ -144,11 +149,14 @@
     justify-content: space-between;
     text-align: left;
     padding: 20px;
+    max-width: none;
+    border-radius: 0;
+    border: #b6b6b6 1px solid;
 }
 
 .catalog-battery-item.catalog-line img,
 .catalog-battery-item.catalog-detailed img {
-    max-width: 150px;
+    max-width: 100px;
     margin-right: 20px;
 }
 

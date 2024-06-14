@@ -13,6 +13,8 @@ import Footer from './components/footer/footer';
 import AboutUs from './components/pages/AboutUs/AboutUs';
 import Home from './components/pages/Home/Home';
 import Catalog from './components/pages/Catalog/Catalog';
+import UserProfile from './components/UserProfile/UserProfile';
+import Login from './components/modals/Login/Login';
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
         {/* Basic Routing */}
         <Routes>
           <Route path='/' index element={<Home />}></Route>
+          <Route path='profile' index element={<UserProfile />}></Route>
+          <Route path='login' index element={<Login />}></Route>
           <Route path='catalog' element={<Catalog />}></Route>
           <Route path='about-us' element={<AboutUs />}>
             <Route path='specials'></Route>
