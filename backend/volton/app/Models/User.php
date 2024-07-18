@@ -18,6 +18,7 @@ class User extends Model
         'password',
         'phone',
         'role_id',
+        'customer_id',
     ];
 
     protected $hidden = [
@@ -27,5 +28,10 @@ class User extends Model
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
     }
 }
